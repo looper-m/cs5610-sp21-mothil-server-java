@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../styles.css"/>
+    <link rel="stylesheet" href="./login.style.client.css"/>
+</head>
+<body>
+<div class="shadow-lg p-5 mt-5 mb-5 bg-white rounded container">
+    <h1 class="d-flex justify-content-center heading-color mb-4">Sign into BlueBoard</h1>
+    <form>
+        <div class="form-group row mb-4">
+            <label for="username" class="col-sm-2 col-lg-1 col-form-label">Username</label>
+            <div class="col-sm-10 col-lg-11">
+                <input type="text" id="username" class="form-control" placeholder="Alice"/>
+            </div>
+        </div>
+        <div class="form-group row mb-4">
+            <label for="password" class="col-sm-2 col-lg-1 col-form-label">Password</label>
+            <div class="col-sm-10 col-lg-11">
+                <input type="password" id="password" class="form-control" placeholder="123qwe#$%"/>
+            </div>
+        </div>
+        <div class="form-group row mb-1">
+            <div class="col-sm-2 col-lg-1"></div>
+            <div class="d-flex col-sm-10 col-lg-11">
+                <button class="btn btn-primary flex-grow-1">Sign In</button>
+                <a class="btn btn-danger ml-2 float-right" href="../index.html">Cancel</a>
+            </div>
+        </div>
+        <div class="form-group row mb-0">
+            <div class="col-sm-2 col-lg-1"></div>
+            <div class="col-sm-10 col-lg-11">
+                <a class="subfont-size">Forgot Password?</a>
+                <a class="subfont-size ml-2" href="../register/register.template.client.html">Sign Up</a>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
