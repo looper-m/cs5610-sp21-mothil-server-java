@@ -1,7 +1,26 @@
+.text-color {
+    color: #646464;
+    outline-color: #a9a9a9;
+}
+
+.logo-header {
+    width: 50%;
+    height: auto;
+}
+
+.text-lite-shadow {
+    text-shadow: 3px 3px 5px #ebebeb;
+}
+
 .heading-color {
-    color: dodgerblue;
+    color: #017cfe;
 }
 
 .subfont-size {
     font-size: smaller;
 }
+
+.bg-container {
+    background-color: #017cfe;
+}
+
