@@ -2,4 +2,6 @@
 
 Developed 'BlueBoard' course manager wireframe.
 
-- Mothil Prabu Subramanian
+**Name:** Mothil Prabu Subramanian
+
+**NUID:** 001373547
