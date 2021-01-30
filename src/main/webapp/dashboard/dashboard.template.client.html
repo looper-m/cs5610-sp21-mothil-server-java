@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://kit.fontawesome.com/3ca762c430.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous" defer></script>
+
+    <link rel="icon" href="../bb-favicon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../styles.css"/>
+    <link rel="stylesheet" href="./dashboard.styles.client.css"/>
+
+    <title>Dashboard</title>
+</head>
+<body class="wbdv-bg-ash">
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-primary">
+    <div class="d-flex flex-grow-1">
+        <span class="navbar-brand mr-0 mr-md-5">
+            <a class="mr-3" href="#"><span class="fas fa-bars fa-lg wbdv-overlay-text-color"></span></a>
+            <h3 class="d-none d-md-inline wbdv-overlay-text-color align-bottom">Course Manager</h3>
+        </span>
+        <div class="mt-1 w-100">
+            <div class="input-group">
+                <input type="text" class="form-control border-0 wbdv-rm-round-corners" placeholder="New Course Title"/>
+                <span class="input-group-append">
+                    <button class="btn wbdv-input-group-align" type="button">
+                        <span class="fas fa-plus-circle fa-inverse fa-2x wbdv-add-course-icon-color"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row wbdv-bg-ash sticky-top wbdv-sticky-offset py-3 border-bottom shadow-sm">
+        <div class="col-sm-0 col-md-0 col-lg-1 col-xl-3"></div>
+        <div class="col-sm-5 col-md-6 col-lg-5 col-xl-3">
+            <strong class="wbdv-standalone-text-color pl-2">Title</strong>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-1 d-none d-md-block">
+            <strong class="wbdv-standalone-text-color">Owned by&nbsp;</strong>
+            <i class="fas fa-caret-up wbdv-fas-color"></i>
+        </div>
+        <div class="col-sm-3 col-md-2 col-lg-2 col-xl-1 d-none d-md-block">
+            <strong class="wbdv-standalone-text-color">Last modified</strong>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-1 col-xl-1 d-none d-md-block">
+            <i class="fas fa-th mr-3 wbdv-fas-color"></i>
+            <i class="fas fa-sort-alpha-down wbdv-fas-color"></i>
+        </div>
+        <div class="col-sm-0 col-md-0 col-lg-1 col-xl-3"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-10 col-xl-6 mx-auto">
+            <table class="table table-hover bg-white shadow-sm rounded">
+<!--                <thead>-->
+<!--                    <tr>-->
+<!--                        <th scope="col" width="52%"></th>-->
+<!--                        <th scope="col" width="18%" class="d-none d-md-table-cell"></th>-->
+<!--                        <th scope="col" width="28%" class="d-none d-md-table-cell"></th>-->
+<!--                        <th scope="col" width="4%"></th>-->
+<!--                    </tr>-->
+<!--                </thead>-->
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html"><i class="fas fa-file-alt mr-2"></i>
+                            CS5500 Software Engineering Graduate
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">7:45 AM</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html"><i class="fas fa-file-alt mr-2"></i>
+                            CS5600 Computer Systems
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">7:47 AM</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            CS6200 Information Retrieval
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">10:00 AM</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            CS5610 Web Development
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">10:36 AM</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            CS5200 Database Management Systems
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">12:00 PM</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <p class="wbdv-standalone-text-color"><strong>Yesterday</strong></p>
+            <table class="table table-hover bg-white shadow-sm rounded">
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            <span class="">IS5225 Data Science Engineering</span>
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">Jan 28, 2021</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            CSYE6225 Network Structures
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">Jan 28, 2021</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            CSYE6205 Connected Devices
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">Jan 28, 2021</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            CS5100 Foundations of AI
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">Jan 28, 2021</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <p class="wbdv-standalone-text-color"><strong>Previous 7 days</strong></p>
+            <table class="table table-hover bg-white shadow-sm rounded">
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            CS5010 Programming Design
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">Jan 27, 2021</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            CS6300 Machine Learning
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">Jan 26, 2021</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="../editor/editor.template.client.html">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            CS5800 Algorithms
+                        </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">me</td>
+                    <td class="d-none d-md-table-cell">Jan 24, 2021</td>
+                    <td><i class="fas fa-trash-alt wbdv-fas-color pull-right"></i></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="wbdv-float-btn shadow"><i class="fas fa-plus-circle fa-4x"></i></div>
+</div>
+</body>
+</html>

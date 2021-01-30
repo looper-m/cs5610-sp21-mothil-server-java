@@ -1,0 +1,50 @@
+.wbdv-input-group-align {
+    padding-top: inherit;
+    border-top-width: medium;
+}
+
+.wbdv-add-course-icon-color {
+    color: orange;
+}
+
+.wbdv-bg-ash {
+    background-color: #e9ecef;
+}
+
+.wbdv-rm-round-corners {
+    border-radius: 0;
+}
+
+.wbdv-sticky-offset {
+    top: 64px;
+}
+
+.wbdv-float-btn {
+    position: fixed;
+    right: 45px;
+    bottom: 40px;
+    color: indianred;
+    border-radius: 50px;
+}
+
+table tr td:first-child {
+    width: 52.5%;
+}
+
+table tr td:nth-child(2) {
+    width: 17%;
+}
+
+table tr td:nth-child(3) {
+    width: 28.5%;
+}
+
+table tr td:nth-child(4) {
+    width: 4%;
+}
+
+/*table tr td {*/
+/*    border-bottom-style: solid !important;*/
+/*    border-bottom-color: #e9ecef !important;*/
+/*    border-bottom-width: thin !important;*/
+/*}*/

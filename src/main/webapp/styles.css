@@ -1,26 +1,33 @@
-.text-color {
+.wbdv-standalone-text-color, .wbdv-fas-color {
     color: #646464;
     outline-color: #a9a9a9;
 }
 
-.logo-header {
-    width: 50%;
-    height: auto;
-}
-
-.text-lite-shadow {
-    text-shadow: 3px 3px 5px #ebebeb;
-}
-
-.heading-color {
+.wbdv-blueboard-color {
     color: #017cfe;
 }
 
-.subfont-size {
+.wbdv-blueboard-bg-comp-color {
+    background-color: #646464 !important;
+}
+
+.wbdv-overlay-text-color {
+    color: whitesmoke;
+}
+
+.wbdv-sub-text-size {
     font-size: smaller;
 }
 
-.bg-container {
-    background-color: #017cfe;
+.wbdv-lite-text-shadow {
+    text-shadow: 3px 3px 5px #ebebeb;
 }
 
+/*.scroll-nav .nav-tabs {*/
+/*    overflow-x: auto;*/
+/*    overflow-y:hidden;*/
+/*    flex-wrap: nowrap;*/
+/*}*/
+/*.scroll-nav .nav-tabs .nav-link .nav-item {*/
+/*    white-space: nowrap;*/
+/*}*/

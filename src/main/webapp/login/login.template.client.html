@@ -3,47 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <script src="https://kit.fontawesome.com/3ca762c430.js" crossorigin="anonymous"></script>
+
     <link rel="icon" href="../bb-favicon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../styles.css"/>
     <link rel="stylesheet" href="./login.style.client.css"/>
+
     <title>Sign In</title>
 </head>
 <body>
 <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded container">
     <!--    where do we store static content(images, ..) to render? -->
     <img src="../bb-logo.jpg" class="mx-auto d-block mb-4 img-fluid" alt width="278"/>
-    <h4 class="heading-color text-lite-shadow mb-2">Sign In</h4>
-    <form>
-        <div class="form-group row mb-4">
-            <label for="username" class="col-sm-2 col-lg-1 col-form-label text-color">Username</label>
-            <div class="col-sm-10 col-lg-11">
-                <input type="text" id="username" class="form-control" placeholder="Alice"/>
-            </div>
+    <h4 class="wbdv-blueboard-color wbdv-lite-text-shadow mb-2">Sign In</h4>
+    <div class="form-group row mb-4">
+        <label for="username" class="col-sm-2 col-lg-1 col-form-label wbdv-standalone-text-color">Username</label>
+        <div class="col-sm-10 col-lg-11">
+            <input type="text" id="username" class="form-control" placeholder="Alice"/>
         </div>
-        <div class="form-group row mb-4">
-            <label for="password" class="col-sm-2 col-lg-1 col-form-label text-color">Password</label>
-            <div class="col-sm-10 col-lg-11">
-                <input type="password" id="password" class="form-control" placeholder="123qwe#$%"/>
-            </div>
+    </div>
+    <div class="form-group row mb-4">
+        <label for="password" class="col-sm-2 col-lg-1 col-form-label wbdv-standalone-text-color">Password</label>
+        <div class="col-sm-10 col-lg-11">
+            <input type="password" id="password" class="form-control" placeholder="123qwe#$%"/>
         </div>
-        <div class="form-group row mb-2">
-            <div class="col-sm-2 col-lg-1"></div>
-            <div class="d-flex col-sm-10 col-lg-11">
-                <button class="btn btn-outline-primary btn-lg flex-grow-1"><strong>Sign In</strong></button>
-                <a class="btn btn-outline-danger btn-lg ml-2 float-right" href="../index.html"><strong>&times;</strong></a>
-            </div>
+    </div>
+    <div class="form-group row mb-2">
+        <div class="col-sm-2 col-lg-1"></div>
+        <div class="d-flex col-sm-10 col-lg-11">
+            <button class="btn btn-outline-primary btn-lg flex-grow-1"><strong>Sign In</strong></button>
+            <a class="btn btn-outline-danger btn-lg ml-2 float-right" href="../index.html">
+                <span class="fas fa-times fa-lg"></span>
+            </a>
         </div>
-        <div class="form-group row mb-3">
-            <div class="col-sm-2 col-lg-1"></div>
-            <div class="col-sm-10 col-lg-11">
-                <a class="text-color subfont-size"><strong>Forgot Password?</strong></a>
-                <a class="text-color subfont-size ml-2" href="../register/register.template.client.html"><strong>Sign
-                    Up</strong></a>
-            </div>
+    </div>
+    <div class="form-group row mb-3">
+        <div class="col-sm-2 col-lg-1"></div>
+        <div class="col-sm-10 col-lg-11">
+            <a class="wbdv-standalone-text-color wbdv-sub-text-size"><strong>Forgot Password?</strong></a>
+            <a class="wbdv-standalone-text-color wbdv-sub-text-size ml-2" href="../register/register.template.client.html"><strong>Sign
+                Up</strong></a>
         </div>
-    </form>
+    </div>
 </div>
 </body>
 </html>
