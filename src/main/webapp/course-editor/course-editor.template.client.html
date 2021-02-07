@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://kit.fontawesome.com/3ca762c430.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous" defer></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
 
     <link rel="icon" href="../bb-favicon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -23,15 +22,16 @@
 <body>
 <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-primary">
     <span class="navbar-brand mr-4">
-        <a class="mr-3" href="../course-list/course-list.template.client.html"><span class="fas fa-times fa-lg wbdv-overlay-text-color"></span></a>
+        <a class="mr-3" href="../course-list/course-list.template.client.html"><span
+                class="fas fa-times fa-lg wbdv-overlay-text-color"></span></a>
         <h3 class="d-inline wbdv-overlay-text-color align-bottom">Course Title</h3>
     </span>
-    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#editor-navbar"
-            aria-controls="editor-navbar" aria-expanded="false" aria-label="Toggle navigation">
-<!--        <span class="navbar-toggler-icon"></span>-->
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#wbdv-editor-navbar"
+            aria-controls="wbdv-editor-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <!--        <span class="navbar-toggler-icon"></span>-->
         <span class="fas fa-bars fa-lg wbdv-overlay-text-color pt-0 mt-0"></span>
     </button>
-    <div class="collapse navbar-collapse" id="editor-navbar">
+    <div class="collapse navbar-collapse" id="wbdv-editor-navbar">
         <div class="navbar-nav">
             <a class="nav-item nav-link pr-4" href="#">Build</a>
             <a class="nav-item nav-link active pr-4" href="#">Pages</a>
@@ -48,10 +48,11 @@
 <div class="container-fluid">
     <div class="row px-3">
         <div class="col-sm-2 col-md-3 col-xl-2 px-0 py-3">
-            <button class="btn btn-block d-md-none border mb-1" type="button" data-toggle="collapse" data-target="#module-list">
+            <button class="btn btn-block d-md-none border mb-1" type="button" data-toggle="collapse"
+                    data-target="#wbdv-module-list">
                 <i class="fas fa-chevron-circle-down fa-lg wbdv-fas-color"></i>
             </button>
-            <div id="module-list" class="collapse d-md-block">
+            <div id="wbdv-module-list" class="collapse d-md-block">
                 <ul class="list-group wbdv-blueboard-bg-comp-color p-2">
                     <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between rounded mb-2">
                         Module 1 - jQuery

@@ -28,6 +28,18 @@ table tr td:nth-child(5) {
 }
 
 table tr td:nth-child(6) {
-    min-width: 160px;
+    min-width: 208px;
     padding-top: 1rem;
+}
+
+.wbdv-fas-delete-color {
+    color: orangered;
+}
+
+.wbdv-fas-update-color {
+    color: #017cfe;
+}
+
+.wbdv-fas-create-color {
+    color: forestgreen;
 }

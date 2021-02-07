@@ -14,19 +14,18 @@ function AdminUserServiceClient() {
             headers: {
                 'content-type': 'application/json'
             }
-        }).then(function (response) {
-            return response.json()
-        })
+        }).then(response => response.json())
     }
 
     function findAllUsers() {
         return fetch(self.url)
-            .then(function (response) {
-                return response.json()
-            })
+            .then(response => response.json())
     }
 
     function findUserById(userId) {
+        return fetch(`${self.url}/${userId}`, {
+            method: 'GET'
+        }).then(response => response.json())
     }
 
     function updateUser(userId, user) {
@@ -42,8 +41,6 @@ function AdminUserServiceClient() {
     function deleteUser(userId) {
         return fetch(`${self.url}/${userId}`, {
             method: 'DELETE'
-        }).then(function (response) {
-            return response.json()
-        })
+        }).then(response => response.json())
     }
 }

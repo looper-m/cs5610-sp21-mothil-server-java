@@ -7,15 +7,15 @@
     <script src="https://kit.fontawesome.com/3ca762c430.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"></script>
     <script src="../services/user.service.client.js"></script>
     <script src="user-admin.controller.client.js"></script>
 
     <link rel="icon" href="../bb-favicon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles.css"/>
     <link rel="stylesheet" href="./user-admin.style.client.css"/>
 
@@ -28,11 +28,12 @@
         <h3 class="d-inline wbdv-overlay-text-color align-bottom">User Admin</h3>
     </span>
 </nav>
-<div class="container-fluid px-0">
+<div class="container-fluid">
+    <div class="wbdv-user-admin-alert"></div>
     <div class="table-responsive my-1 py-0">
         <table class="table table-borderless table-hover bg-white shadow-sm rounded">
             <thead>
-            <tr class="wbdv-tbl-header wbdv-standalone-text-color">
+            <tr class="wbdv-standalone-text-color">
                 <th>Username</th>
                 <th>Password</th>
                 <th>First Name</th>
@@ -51,39 +52,23 @@
                     <option value="STUDENT">STUDENT</option>
                 </select>
                 </th>
-                <th>
-                    <button class="wbdv-find-btn btn p-1 "><i class="fas fa-search fa-2x wbdv-fas-color"></i></button>
-                    <button class="wbdv-create-btn btn p-1"><i class="fas fa-plus-circle fa-2x wbdv-fas-color"></i>
+                <th class="text-right">
+                    <button class="wbdv-find-btn btn p-1 ">
+                        <i class="fas fa-search fa-2x wbdv-fas-color"></i>
                     </button>
-                    <button class="wbdv-update-btn btn p-1"><i class="fas fa-check-circle fa-2x wbdv-fas-color"></i>
+                    <button class="wbdv-create-btn btn p-1">
+                        <i class="fas fa-plus-circle fa-2x wbdv-fas-create-color"></i>
+                    </button>
+                    <button class="wbdv-update-btn btn p-1">
+                        <i class="fas fa-check-circle fa-2x wbdv-fas-update-color"></i>
+                    </button>
+                    <button class="wbdv-clear-btn btn p-1">
+                        <i class="fas fa-eraser fa-2x wbdv-fas-color"></i>
                     </button>
                 </th>
             </tr>
             </thead>
-            <tbody class="wbdv-table-rows">
-            <!--            <tr class="border-top border-bottom">-->
-            <!--                <td>Mothil15</td>-->
-            <!--                <td>1234rew</td>-->
-            <!--                <td>Tim</td>-->
-            <!--                <td>Berners Lee</td>-->
-            <!--                <td>FACULTY</td>-->
-            <!--                <td>-->
-            <!--                    <button class="wbdv-update-btn btn p-1"><i class="fas fa-pencil-alt fa-2x"></i></button>-->
-            <!--                    <button class="wbdv-update-btn btn p-1"><i class="fas fa-minus-circle fa-2x"></i></button>-->
-            <!--                </td>-->
-            <!--            </tr>-->
-            <!--            <tr>-->
-            <!--                <td>Prafff</td>-->
-            <!--                <td>1234rew</td>-->
-            <!--                <td>Charlie</td>-->
-            <!--                <td>Garcia</td>-->
-            <!--                <td>STUDENT</td>-->
-            <!--                <td>-->
-            <!--                    <button class="btn p-1 wbdv-update-btn"><i class="fas fa-pencil-alt fa-2x"></i></button>-->
-            <!--                    <button class="btn p-1 wbdv-update-btn"><i class="fas fa-minus-circle fa-2x"></i></button>-->
-            <!--                </td>-->
-            <!--            </tr>-->
-            </tbody>
+            <tbody class="wbdv-table-rows"></tbody>
         </table>
     </div>
 </div>
