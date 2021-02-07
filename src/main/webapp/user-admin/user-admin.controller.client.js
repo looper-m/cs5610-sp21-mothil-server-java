@@ -38,7 +38,10 @@ function dismissAlert() {
 function createUser() {
     dismissAlert()
 
-    if (!$userNameFld.val().trim() || !$firstNameFld.val().trim() || !$lastNameFld.val().trim()) {
+    if (!$userNameFld.val().trim()
+        || !$firstNameFld.val().trim()
+        || !$lastNameFld.val().trim()
+        || !$roleFld.val()) {
         showAlert("Cannot create a new user with <strong>missing values</strong>!", alertClass.WARNING)
         return
     }
@@ -53,20 +56,20 @@ function createUser() {
         password: $passwordFld.val().trim(),
         firstName: $firstNameFld.val().trim(),
         lastName: $lastNameFld.val().trim(),
-        role: $roleFld.val().trim()
+        role: $roleFld.val()
     }
 
     userService.createUser(newUser)
         .then(actualUser => {
             users.push(actualUser)
-            renderUsers(users)
+            clearAndRenderUsers(users)
         })
 }
 
 var userToUpdate = null
 
 function editUser(event) {
-    var id = $(event.currentTarget).attr("id")
+    var id = $(event.currentTarget).attr("id").split("::")[1]
     userToUpdate = users.find(user => user._id === id)
 
     $userNameFld.val(userToUpdate.username)
@@ -95,7 +98,7 @@ function updateUser() {
     userToUpdate.password = $passwordFld.val().trim()
     userToUpdate.firstName = $firstNameFld.val().trim()
     userToUpdate.lastName = $lastNameFld.val().trim()
-    userToUpdate.role = $roleFld.val().trim()
+    userToUpdate.role = $roleFld.val()
 
     userService.findUserById(userToUpdate._id)
         .then(retrievedUser => {
@@ -111,7 +114,7 @@ function updateUser() {
                 .then(updatedUser => {
                     var index = users.find(user => user._id === updatedUser._id)
                     users[index] = updatedUser
-                    renderUsers(users)
+                    clearAndRenderUsers(users)
                     showAlert("<strong>User updated successfully!</strong>", alertClass.SUCCESS)
                 })
         }).catch(error => {
@@ -120,41 +123,45 @@ function updateUser() {
 }
 
 function deleteUser(event) {
-    var button = $(event.currentTarget)
-    var index = button.attr("id")
-    var id = users[index]._id
+    var id = $(event.currentTarget).attr("id").split("::")[1]
 
     userService.deleteUser(id)
         .then(status => {
-            users.splice(index, 1)
-            renderUsers(users)
+            users = users.filter(user => user._id !== id)
+            clearAndRenderUsers(users)
         })
 }
 
-function findUser(event) {
+function findUser() {
+    filteredUsers = []
 
+    for (var i = 0; i < users.length; i++) {
+        var includeUser = true
+
+        if ($userNameFld.val().trim() && $userNameFld.val().trim() !== users[i].username) includeUser = false
+        if ($firstNameFld.val().trim() && $firstNameFld.val().trim() !== users[i].firstName) includeUser = false
+        if ($lastNameFld.val().trim() && $lastNameFld.val().trim() !== users[i].lastName) includeUser = false
+        if ($roleFld.val() && $roleFld.val() !== users[i].role) includeUser = false
+
+        if (includeUser) filteredUsers.push(users[i])
+    }
+    renderUsers(filteredUsers)
 }
 
-function clearFlds() {
+function clearAndRenderUsers() {
+    userToUpdate = null
     $userNameFld.val('')
     $passwordFld.val('')
     $firstNameFld.val('')
     $lastNameFld.val('')
-
-    userToUpdate = null
+    $roleFld.val('')
     $updateBtn.prop('disabled', true);
 
-    showAlert("Cleared all fields.", alertClass.INFO)
+    renderUsers(users)
 }
 
 function renderUsers(users) {
     $tableRows.empty()
-    $userNameFld.val('')
-    $passwordFld.val('')
-    $firstNameFld.val('')
-    $lastNameFld.val('')
-    // $roleFld.val()
-    $updateBtn.prop('disabled', true);
 
     for (var i = 0; i < users.length; i++) {
         var user = users[i]
@@ -166,10 +173,10 @@ function renderUsers(users) {
                 <td>${user.lastName}</td>
                 <td>${user.role}</td>
                 <td class="text-right">
-                    <button id="${user._id}" class="wbdv-edit-btn btn p-1">
+                    <button id="edit::${user._id}" class="wbdv-edit-btn btn p-1">
                         <i class="fas fa-pencil-alt fa-2x wbdv-fas-color"></i>
                     </button>
-                    <button id="${i}" class="wbdv-delete-btn btn p-1">
+                    <button id="del::${user._id}" class="wbdv-delete-btn btn p-1">
                         <i class="fas fa-minus-circle fa-2x wbdv-fas-delete-color"></i>
                     </button>
                 </td>
@@ -198,7 +205,7 @@ function init() {
     $createBtn.click(createUser)
     $updateBtn.prop('disabled', true);
     $updateBtn.click(updateUser)
-    $clearBtn.click(clearFlds)
+    $clearBtn.click(clearAndRenderUsers)
 
     userService.findAllUsers().then(function (retrievedUsers) {
         users = retrievedUsers
