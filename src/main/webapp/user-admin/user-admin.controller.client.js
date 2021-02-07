@@ -63,6 +63,7 @@ function createUser() {
         .then(actualUser => {
             users.push(actualUser)
             clearAndRenderUsers(users)
+            showAlert("<strong>Added new user successfully!</strong>", alertClass.SUCCESS)
         })
 }
 
@@ -129,9 +130,11 @@ function deleteUser(event) {
         .then(status => {
             users = users.filter(user => user._id !== id)
             clearAndRenderUsers(users)
+            showAlert("<strong>User deleted successfully!</strong>", alertClass.SUCCESS)
         })
 }
 
+// NOTE: function attached to 'Find' button. Can be used to filter/find one or more rows based on one or more attributes
 function findUser() {
     filteredUsers = []
 
