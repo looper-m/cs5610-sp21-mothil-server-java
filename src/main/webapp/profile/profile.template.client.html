@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous" defer></script>
-    <script src="./profile.script.client.js" defer></script>
+    <script src="profile.controller.client.js" defer></script>
 
     <link rel="icon" href="../bb-favicon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -23,9 +23,9 @@
 <body>
 <div class="shadow-lg p-4 mb-5 bg-white rounded container">
     <h3 class="wbdv-blueboard-color wbdv-lite-text-shadow mb-2">Profile</h3>
-    <div id="saveSuccessAlert"></div>
+    <div id="save-success-alert"></div>
 <!--    todo: update form-->
-    <form id="profileForm" method="post">
+    <form id="profile-form" method="post">
         <div class="form-group row mb-4">
             <label for="username" class="col-sm-2 col-lg-1 col-form-label wbdv-standalone-text-color">Username</label>
             <div class="col-sm-10 col-lg-11">
@@ -49,7 +49,7 @@
             <label for="role" class="col-sm-2 col-lg-1 col-form-label wbdv-standalone-text-color">Role</label>
             <div class="col-sm-10 col-lg-11">
                 <select id="role" class="form-control">
-                    <option selected>Faculty</option>
+                    <option value="Faculty" selected>Faculty</option>
                     <option value="Student">Admin</option>
                     <option value="Admin">Student</option>
                 </select>

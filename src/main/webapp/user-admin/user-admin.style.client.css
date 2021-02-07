@@ -1,0 +1,33 @@
+table tr th {
+    font-size: 1.2rem;
+}
+
+table tr td:first-child {
+    min-width: 205px;
+    padding-top: 1.5rem;
+}
+
+table tr td:nth-child(2) {
+    min-width: 205px;
+    padding-top: 1.5rem;
+}
+
+table tr td:nth-child(3) {
+    min-width: 206px;
+    padding-top: 1.5rem;
+}
+
+table tr td:nth-child(4) {
+    min-width: 206px;
+    padding-top: 1.5rem;
+}
+
+table tr td:nth-child(5) {
+    min-width: 145px;
+    padding-top: 1.5rem;
+}
+
+table tr td:nth-child(6) {
+    min-width: 160px;
+    padding-top: 1rem;
+}
