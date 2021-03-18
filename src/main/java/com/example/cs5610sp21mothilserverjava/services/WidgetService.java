@@ -11,6 +11,16 @@ import java.util.UUID;
 public class WidgetService {
 
     private final List<Widget> widgets = new ArrayList<>();
+    {
+        Widget w1 = new Widget(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE, "ABC123", "HEADING", 1, "Welcome to Widgets");
+        Widget w2 = new Widget(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE, "ABC234", "PARAGRAPH", 1, "This is a paragraph");
+        Widget w3 = new Widget(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE, "ABC234", "HEADING", 2, "Welcome to WebDev");
+        Widget w4 = new Widget(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE, "ABC234", "PARAGRAPH", 1, "Lorem ipsum");
+        widgets.add(w1);
+        widgets.add(w2);
+        widgets.add(w3);
+        widgets.add(w4);
+    }
 
     public Widget createWidget(String topicId, Widget widget) {
         long widgetId = UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE;

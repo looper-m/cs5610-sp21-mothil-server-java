@@ -16,6 +16,21 @@ public class Widget {
     private String value;
     private String topicId;  // todo not mentioned
 
+    public Widget() {
+    }
+
+    public Widget(long id,
+                  String topicId,
+                  String type,
+                  int size,
+                  String text) {
+        this.id = id;
+        this.type = type;
+        this.text = text;
+        this.size = size;
+        this.topicId = topicId;
+    }
+
     public Widget(String name,
                   long id,
                   String type,
