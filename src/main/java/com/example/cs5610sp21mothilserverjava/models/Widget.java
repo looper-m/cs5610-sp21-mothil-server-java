@@ -3,7 +3,7 @@ package com.example.cs5610sp21mothilserverjava.models;
 public class Widget {
 
     private String name;
-    private long id;
+    private String id;
     private String type;
     private int widgetOrder;
     private String text;
@@ -19,7 +19,7 @@ public class Widget {
     public Widget() {
     }
 
-    public Widget(long id,
+    public Widget(String id,
                   String topicId,
                   String type,
                   int size,
@@ -32,7 +32,7 @@ public class Widget {
     }
 
     public Widget(String name,
-                  long id,
+                  String id,
                   String type,
                   int widgetOrder,
                   String text,
@@ -67,11 +67,11 @@ public class Widget {
         this.name = name;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

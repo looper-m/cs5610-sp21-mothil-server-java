@@ -11,19 +11,9 @@ import java.util.UUID;
 public class WidgetService {
 
     private final List<Widget> widgets = new ArrayList<>();
-    {
-        Widget w1 = new Widget(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE, "ABC123", "HEADING", 1, "Welcome to Widgets");
-        Widget w2 = new Widget(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE, "ABC234", "PARAGRAPH", 1, "This is a paragraph");
-        Widget w3 = new Widget(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE, "ABC234", "HEADING", 2, "Welcome to WebDev");
-        Widget w4 = new Widget(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE, "ABC234", "PARAGRAPH", 1, "Lorem ipsum");
-        widgets.add(w1);
-        widgets.add(w2);
-        widgets.add(w3);
-        widgets.add(w4);
-    }
 
     public Widget createWidget(String topicId, Widget widget) {
-        long widgetId = UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE;
+        String widgetId = UUID.randomUUID().toString();
         widget.setId(widgetId);
         widget.setTopicId(topicId);
         widgets.add(widget);
@@ -42,9 +32,9 @@ public class WidgetService {
         return widgetsForTopic;
     }
 
-    public int updateWidget(long widgetId, Widget newWidget) {
+    public int updateWidget(String widgetId, Widget newWidget) {
         for (int i = 0; i < widgets.size(); i++) {
-            if (widgets.get(i).getId() == widgetId) {
+            if (widgets.get(i).getId().equals(widgetId)) {
                 widgets.set(i, newWidget);
                 return 0;
             }
@@ -53,10 +43,10 @@ public class WidgetService {
         return -1;
     }
 
-    public int deleteWidget(long widgetId) {
+    public int deleteWidget(String widgetId) {
         int removeIndex = -1;
         for (int i = 0; i < widgets.size(); i++) {
-            if (widgets.get(i).getId() == widgetId) {
+            if (widgets.get(i).getId().equals(widgetId)) {
                 removeIndex = i;
                 break;
             }
@@ -74,9 +64,9 @@ public class WidgetService {
         return widgets;
     }
 
-    public Widget findWidgetById(long widgetId) {
+    public Widget findWidgetById(String widgetId) {
         for (Widget widget : widgets) {
-            if (widget.getId() == widgetId) {
+            if (widget.getId().equals(widgetId)) {
                 return widget;
             }
         }
