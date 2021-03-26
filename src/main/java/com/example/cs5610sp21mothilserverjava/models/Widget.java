@@ -1,25 +1,35 @@
 package com.example.cs5610sp21mothilserverjava.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Widget {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     private String name;
-    private String id;
     private String type;
     private int widgetOrder;
     private String text;
-    private String url;
+    private String src;
     private int size;
     private int width;
     private int height;
     private String cssClass;
     private String style;
     private String value;
-    private String topicId;  // todo not mentioned
+    private String topicId;
+    public Boolean ordered;
 
     public Widget() {
     }
 
-    public Widget(String id,
+    public Widget(Integer id,
                   String topicId,
                   String type,
                   int size,
@@ -32,24 +42,25 @@ public class Widget {
     }
 
     public Widget(String name,
-                  String id,
+                  Integer id,
                   String type,
                   int widgetOrder,
                   String text,
-                  String url,
+                  String src,
                   int size,
                   int width,
                   int height,
                   String cssClass,
                   String style,
                   String value,
-                  String topicId) {
+                  String topicId,
+                  Boolean ordered) {
         this.name = name;
         this.id = id;
         this.type = type;
         this.widgetOrder = widgetOrder;
         this.text = text;
-        this.url = url;
+        this.src = src;
         this.size = size;
         this.width = width;
         this.height = height;
@@ -57,6 +68,7 @@ public class Widget {
         this.style = style;
         this.value = value;
         this.topicId = topicId;
+        this.ordered = ordered;
     }
 
     public String getName() {
@@ -67,11 +79,11 @@ public class Widget {
         this.name = name;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -99,12 +111,12 @@ public class Widget {
         this.text = text;
     }
 
-    public String getUrl() {
-        return url;
+    public String getSrc() {
+        return src;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setSrc(String src) {
+        this.src = src;
     }
 
     public int getSize() {
@@ -161,5 +173,13 @@ public class Widget {
 
     public void setTopicId(String topicId) {
         this.topicId = topicId;
+    }
+
+    public Boolean getOrdered() {
+        return ordered;
+    }
+
+    public void setOrdered(Boolean ordered) {
+        this.ordered = ordered;
     }
 }
